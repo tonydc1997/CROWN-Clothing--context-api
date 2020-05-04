@@ -12,11 +12,8 @@
   .items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-
-    & .collection-item {
-      margin-bottom: 30px;
-    }
+    grid-gap: 16px;
+    margin-bottom: 48px;
 
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr 1fr;
