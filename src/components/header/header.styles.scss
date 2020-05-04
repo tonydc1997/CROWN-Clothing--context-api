@@ -10,6 +10,24 @@
     height: 100%;
     width: 70px;
     padding: 24px 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 37%;
+      bottom: -6px;
+      width: 70%;
+      height: 2px;
+      background-color: hsl(210, 10%, 35%);
+      transform-origin: center;
+      transform: translate(-50%, 0) scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: translate(-50%, 0) scaleX(1);
+    }
   }
 
   .options {
@@ -22,6 +40,26 @@
     .option {
       padding: 24px 16px;
       cursor: pointer;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        width: 70%;
+        height: 2px;
+        opacity: 0;
+        background-color: #fc2f70;
+        transform-origin: center;
+        transform: translate(-50%, 0) scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover::before {
+        transform: translate(-50%, 0) scaleX(1);
+        opacity: 1;
+      }
     }
   }
 }
