@@ -13,9 +13,10 @@
   }
 
   .item-count {
-    position: absolute;
+    bottom: 10px;
+    color: hsl(209, 34%, 30%);
     font-size: 12px;
     font-weight: bold;
-    bottom: 10px;
+    position: absolute;
   }
 }
