@@ -5,6 +5,10 @@ import { createStructuredSelector } from 'reselect';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
 
+import CreditCard from '../../assets/pay.svg';
+import CardExp from '../../assets/icon-calendar-date.svg';
+import CardCVC from '../../assets/icon-lock.svg';
+
 import {
   selectCartItems,
   selectCartTotal,
@@ -22,9 +26,19 @@ const CheckoutPage = ({ cartItems, total }) => (
       <span className="totalPrice"> ${total}</span>
     </div>
     <div className="test-warning">
-      Please use the credit card below when making payments.
-      <br />
-      4242 4242 4242 4242 - Exp: 01/20 - CVV: 123
+      <p className="test-title">
+        Please use the credit card below when making payments.
+      </p>
+      <span className="test-message">
+        <img src={CreditCard} alt="Credit Card icon" />
+        4242 4242 4242 4242
+        <br />
+        <img src={CardExp} alt="Calender Icon" />
+        01/30
+        <br />
+        <img src={CardCVC} alt="Secure Lock" />
+        123
+      </span>
     </div>
     <StripeCheckoutButton price={total} />
   </div>
