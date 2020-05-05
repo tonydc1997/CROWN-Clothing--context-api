@@ -8,7 +8,7 @@ import CollectionsContext from '../../contexts/collections/collections.context';
 
 import './collection.styles.scss';
 
-const CollectionPage = ({ collection }) => {
+const CollectionPage = ({ match }) => {
   const { title, items } = collection;
   return (
     <div className="collection-page">
