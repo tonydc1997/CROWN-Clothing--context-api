@@ -19,6 +19,13 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 import CurrentUserContext from './contexts/current-user/current-user.context';
 
 class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null,
+    };
+  }
   unsubscribeFromAuth = null;
 
   componentDidMount() {
