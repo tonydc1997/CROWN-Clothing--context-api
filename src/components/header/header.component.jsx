@@ -13,6 +13,7 @@ import { CartContext } from '../../providers/cart/cart.provider';
 
 const Header = () => {
   const currentUser = useContext(CurrentUserContext);
+  const hidden = useContext(CartContext);
   return (
     <div className="header">
       <Link className="logo-container" to="/">
