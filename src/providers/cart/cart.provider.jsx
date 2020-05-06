@@ -19,7 +19,7 @@ const CartProvider = ({ children }) => {
   const addItem = item => addItemToCart(cartItems, item);
   const toggleHidden = () => setHidden(!hidden);
   return (
-    <CartProvider
+    <CartContext.Provider
       value={{
         hidden,
         toggleHidden,
@@ -29,7 +29,7 @@ const CartProvider = ({ children }) => {
       }}
     >
       {children}
-    </CartProvider>
+    </CartContext.Provider>
   );
 };
 
