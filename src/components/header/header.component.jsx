@@ -13,7 +13,7 @@ import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 import './header.styles.scss';
 
-const Header = ({ hidden }) => {
+const Header = () => {
   const currentUser = useContext(CurrentUserContext);
   const [hidden, setHidden] = useState(true);
   const toggleHidden = () => setHidden(!hidden);
