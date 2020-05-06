@@ -10,3 +10,7 @@ const CartContext = createContext({
   clearItemFromCart: () => {},
   cartItemsCount: 0,
 });
+
+const CartProvider = ({ children }) => {
+  return <CartProvider>{children}</CartProvider>;
+};
