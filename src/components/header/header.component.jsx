@@ -12,6 +12,7 @@ import CurrentUserContext from '../../contexts/current-user/current-user.context
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 import './header.styles.scss';
+import CartContext from '../../contexts/cart/cart.context';
 
 const Header = () => {
   const currentUser = useContext(CurrentUserContext);
@@ -35,7 +36,9 @@ const Header = () => {
             SIGN IN
           </Link>
         )}
-        <CartIcon />
+        <CartContext.Provider value={{ hidden, toggleHidden }}>
+          <CartIcon />
+        </CartContext.Provider>
       </div>
       {hidden ? null : <CartDropdown />}
     </div>
