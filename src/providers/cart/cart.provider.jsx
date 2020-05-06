@@ -18,5 +18,17 @@ const CartProvider = ({ children }) => {
 
   const addItem = item => addItemToCart(cartItems, item);
   const toggleHidden = () => setHidden(!hidden);
-  return <CartProvider>{children}</CartProvider>;
+  return (
+    <CartProvider
+      value={{
+        hidden,
+        toggleHidden,
+        cartItems,
+        addItem,
+        cartItemsCount,
+      }}
+    >
+      {children}
+    </CartProvider>
+  );
 };
