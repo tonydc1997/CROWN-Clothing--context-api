@@ -32,3 +32,5 @@ const CartProvider = ({ children }) => {
     </CartProvider>
   );
 };
+
+export default CartProvider;
