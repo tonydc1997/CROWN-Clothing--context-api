@@ -7,8 +7,9 @@ import { CartContext } from '../../providers/cart/cart.provider';
 
 import './collection-item.styles.scss';
 
-const CollectionItem = ({ item, addItem }) => {
+const CollectionItem = ({ item }) => {
   const { name, price, imageUrl } = item;
+  const { addItem } = useContext(CartContext);
 
   return (
     <div className="collection-item">
