@@ -15,6 +15,8 @@ import './header.styles.scss';
 
 const Header = ({ hidden }) => {
   const currentUser = useContext(CurrentUserContext);
+  const [hidden, setHidden] = useState(true);
+  const toggleHidden = () => setHidden(!hidden);
   return (
     <div className="header">
       <Link className="logo-container" to="/">
