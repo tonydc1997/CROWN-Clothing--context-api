@@ -12,5 +12,11 @@ const CartContext = createContext({
 });
 
 const CartProvider = ({ children }) => {
+  const [hidden, setHidden] = useState(true);
+  const [cartItems, setCartItems] = useState([]);
+  const [cartItemsCount, setCartItemsCount] = useState(0);
+
+  const addItem = item => addItemToCart(cartItems, item);
+  const toggleHidden = () => setHidden(!hidden);
   return <CartProvider>{children}</CartProvider>;
 };
