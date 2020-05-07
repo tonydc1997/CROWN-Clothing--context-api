@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -8,6 +8,8 @@ import StripeCheckoutButton from '../../components/stripe-button/stripe-button.c
 import CreditCard from '../../assets/pay.svg';
 import CardExp from '../../assets/icon-calendar-date.svg';
 import CardCVC from '../../assets/icon-lock.svg';
+
+import { CartContext } from '../../providers/cart/cart.provider';
 
 import {
   selectCartItems,
