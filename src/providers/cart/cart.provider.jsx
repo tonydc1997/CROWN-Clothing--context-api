@@ -3,6 +3,7 @@ import {
   removeItemFromCart,
   addItemToCart,
   filterItemFromCart,
+  getCartItemsCount,
 } from './cart.utils';
 
 export const CartContext = createContext({
