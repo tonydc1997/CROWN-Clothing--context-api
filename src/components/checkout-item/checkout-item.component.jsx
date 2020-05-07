@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { connect } from 'react-redux';
 
 import {
@@ -6,6 +6,7 @@ import {
   addItem,
   removeItem,
 } from '../../redux/cart/cart.actions';
+import { CartContext } from '../../providers/cart/cart.provider';
 
 import './checkout-item.styles.scss';
 
