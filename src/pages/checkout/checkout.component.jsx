@@ -11,14 +11,12 @@ import CardCVC from '../../assets/icon-lock.svg';
 
 import { CartContext } from '../../providers/cart/cart.provider';
 
-import {
-  selectCartItems,
-  selectCartTotal,
-} from '../../redux/cart/cart.selectors';
+import { selectCartTotal } from '../../redux/cart/cart.selectors';
 
 import './checkout.styles.scss';
 
-const CheckoutPage = ({ cartItems, total }) => {
+const CheckoutPage = ({ total }) => {
+  const { cartItems } = useContext(CartContext);
   return (
     <div className="checkout-page">
       {cartItems.map(cartItem => (
@@ -49,7 +47,6 @@ const CheckoutPage = ({ cartItems, total }) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems,
   total: selectCartTotal,
 });
 
